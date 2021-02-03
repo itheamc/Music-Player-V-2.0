@@ -3,9 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Music Player V 2.0</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" integrity="sha512-BnbUDfEUfV0Slx6TunuB042k9tuKe3xrD6q4mg5Ed72LTgzDIcLPxg6yI2gcMFRyomt+yJJxE+zJwNmxki6/RA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="music.css">
 </head>
 <body>
+    <div class="main_div" id="main_div">
+        <div class="music_player_div">
+
+            <!-- This section will consists all the div related to the music info -->
+            <div class="music_info_div" id="music_info_div">
+                <div class="music_title_div" id="music_title_div">
+                    <h1 class="music_title" id="music_title">Title Is This</h1>
+                </div>
+                <div class="music_artists_div" id="music_artists_div">
+                    <h3 class="music_artists" id="music_artists">This is Artists</h3>
+                </div>
+            </div>
+
+            <!-- This section will consists all the div related to the cover image -->
+            <div class="cover_image_div" id="cover_image_div">
+                <img src="" alt="" class="cover_image" id="cover_image">
+            </div>
+
+            <!-- This section will consists all the div related to the music control -->
+            <div class="music_control_div" id="music_control_div">
+                <!-- This div consists the music current playback time and total duration -->
+                <div class="music_time_info_div">
+                    <div id="mucic_current_time"></div>
+                    <div id="music_total_duration"></div>
+                </div>
+                <!-- This div is related to the progress of the music playback -->
+                <div class="progress_div" id="progress_div">
+                    <div class="progress_bar" id="progress_bar">
+                        <div id="progress"></div>
+                    </div>
+                    <div class="progress_circle" id="progress_circle"></div>
+                </div>
+
+                <!-- This section will consists the music playback control like play, pause, 
+                forward, backward etc -->
+                <div class="playback_control_div" id="playback_control_div">
+                    <div id="forward"><i class="fas fa-step-forward"></i></div>
+                    <div id="play"><i class="fas fa-play"></i></div>
+                    <div id="backward"><i class="fas fa-step-backward"></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
     
 </body>
 </html>
