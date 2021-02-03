@@ -6,3 +6,26 @@ body {
     margin: 0;
     padding: 0;
 }
+
+.main_div {
+    width: 200px;
+    height: 200px;
+    /* display: flex; */
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: burlywood;
+}
+
+.child_div {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: coral;
+}
