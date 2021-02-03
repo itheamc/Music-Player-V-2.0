@@ -28,8 +28,8 @@ body {
     display: flex;
     border-radius: 16px;
     animation-name: colorAnimation;
-    animation-duration: 2s;
-    animation-timing-function:cubic-bezier(0.39, 0.575, 0.565, 1);
+    animation-duration: 500ms;
+    animation-timing-function:cubic-bezier(1, 0, 0, 1);
     animation-iteration-count: infinite;
 }
 
