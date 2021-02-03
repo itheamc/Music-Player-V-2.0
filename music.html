@@ -29,7 +29,7 @@
 
                 <!-- This section will consists all the div related to the cover image -->
                 <div class="cover_image_div" id="cover_image_div">
-                    <img src="image/awaara.jpg" alt="" class="cover_image" id="cover_image">
+                    <img src="image/awaara.jpg" alt="" class="cover_image rotating_anim" id="cover_image">
                 </div>
             </section>
 
@@ -39,23 +39,23 @@
                 <div class="music_control_div" id="music_control_div">
                     <!-- This div consists the music current playback time and total duration -->
                     <div class="music_time_info_div">
-                        <div id="mucic_current_time"></div>
-                        <div id="music_total_duration"></div>
+                        <div id="mucic_current_time">0:11</div>
+                        <div id="music_total_duration">3:45</div>
                     </div>
                     <!-- This div is related to the progress of the music playback -->
                     <div class="progress_div" id="progress_div">
                         <div class="progress_bar" id="progress_bar">
                             <div id="progress"></div>
+                            <div class="progress_circle" id="progress_circle"></div>
                         </div>
-                        <div class="progress_circle" id="progress_circle"></div>
                     </div>
 
                     <!-- This section will consists the music playback control like play, pause, 
                 forward, backward etc -->
                     <div class="playback_control_div" id="playback_control_div">
-                        <div id="forward"><i class="fas fa-step-forward"></i></div>
-                        <div id="play"><i class="fas fa-play"></i></div>
-                        <div id="backward"><i class="fas fa-step-backward"></i></div>
+                        <div id="backward_div"><i class="fas fa-step-backward" id="backward"></i></div>
+                        <div id="play_div"><i class="fas fa-play" id="play"></i></div>
+                        <div id="forward_div"><i class="fas fa-step-forward" id="forward"></i></div>
                     </div>
                 </div>
             </section>

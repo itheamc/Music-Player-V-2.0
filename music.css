@@ -17,8 +17,8 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    box-shadow: 10px 10px 50px 20px grey;
-    border-radius: 8px;
+    /* box-shadow: 10px 10px 50px 20px grey; */
+    border-radius: 16px;
 }
 
 /* This is the css styling for the music_player_div */
@@ -26,6 +26,35 @@ body {
     width: 100%;
     height: 100%;
     display: flex;
+    border-radius: 16px;
+    animation-name: colorAnimation;
+    animation-duration: 2s;
+    animation-timing-function:cubic-bezier(0.39, 0.575, 0.565, 1);
+    animation-iteration-count: infinite;
+}
+
+@keyframes colorAnimation {
+    0% {
+        background-color: rgba(255, 0, 0, 0.30);
+        box-shadow: 10px 10px 50px 20px rgba(255, 102, 0, 0.75);
+    }
+    25% {
+        background-color: rgba(255, 102, 0, 0.30);
+        box-shadow: 10px 10px 50px 20px rgba(255, 0, 0, 0.75);
+    }
+    50% {
+        background-color: rgba(255, 255, 0, 0.30);
+        box-shadow: 10px 10px 50px 20px rgba(255, 0, 0, 0.75);
+    }
+    75% {
+        background-color: rgba(209, 201, 87, 0.30);
+        box-shadow: 10px 10px 50px 20px rgba(255, 0, 119, 0.658);
+    }
+    100% {
+       background-color: rgba(255, 0, 0, 0.30);
+       box-shadow: 10px 10px 50px 20px rgba(209, 201, 87, 0.75);
+
+    }
 }
 
 /* This is the css styling for the left section */
@@ -83,17 +112,183 @@ body {
     width: 250px;
     height: 250px;
     position: relative;
-    top: 50%;
-    left: 50%;
+    display: flex;
+    margin: auto;
+    top: 20px;
     border-image: round;
-    transform: translate(-50%, -50%);
     border-radius: 250px;
+}
+
+/* This is the css for the cover image rotation */
+.rotating_anim {
+    animation-name: image_rotation;
+    animation-duration: 4s;
+    animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    animation-iteration-count: infinite;
+}
+
+@keyframes image_rotation {
+    from {
+        transform: rotate(0deg) ;
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 /*_______________________Right Section CSS_____________________*/
 /* This is the css styling for the right section */
 .right_section {
     width: 50%;
+}
+
+/* This is the css styling for music_control_div */
+.music_control_div {
+    width: 100%;
+    height: 100%;
     display: block;
-    background-color: blueviolet;
+}
+
+/* This is the css for music_time_info_div */
+.music_time_info_div {
+    width: 95%;
+    position: relative;
+    display: flex;
+    margin: auto;
+    top: 200px;
+    justify-content: space-between;
+}
+
+/* This is the css for progress_div */
+.progress_div {
+    width: 90%;
+    height: 50px;
+    position: relative;
+    display: flex;
+    margin: auto;
+    top: 200px;
+}
+
+
+/* This is the css for progressbar */
+.progress_bar {
+    width: 100%;
+    height: 5px;
+    position: relative;
+    display: flex;
+    top: 5px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+}
+
+.progress_bar:hover {
+    cursor: pointer;
+}
+
+/* This is the css for progress */ 
+#progress {
+    width: 50%;
+    height: 100%;
+    background-color: rgb(250, 204, 0);
+    border-radius: 20px;
+}
+
+/* This is the css for progress circle */
+.progress_circle {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    background-color: rgb(250, 204, 0);
+    position: absolute;
+    top: -100%;
+    transform: translateX(-50%);
+    box-shadow: 2px 2px 10px 4px rgb(255, 166, 0);
+}
+
+.progress_circle:hover {
+    cursor: pointer;
+}
+
+/* This is the css for the playback_control_div */
+.playback_control_div {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    top: 200px;
+}
+
+/* This id the css for the play div */
+#play_div {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    position: relative;
+    background-color: rgb(255, 187, 0);
+    border-radius: 50px;
+}
+
+#play {
+    display: flex;
+    position: relative;
+    margin: auto;
+}
+
+#play_div:hover {
+    cursor: pointer;
+    background-color: rgb(250, 0, 42);
+    box-shadow: 5px 1px 40px 5px rgb(245, 0, 143);
+}
+
+#play_div:hover > #play {
+    color: aliceblue;
+}
+
+/* This is the css for forward_div  */
+#forward_div {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    position: relative;
+    border-radius: 50px;
+}
+
+#forward {
+    display: flex;
+    position: relative;
+    margin: auto;
+}
+
+#forward_div:hover {
+    cursor: pointer;
+    
+}
+
+#forward_div:hover > #forward {
+    color: rgb(250, 0, 67);
+}
+
+/* This is the css for backward_div  */
+#backward_div {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    position: relative;
+    border-radius: 50px;
+}
+
+
+#backward {
+    display: flex;
+    position: relative;
+    margin: auto;
+}
+
+#backward_div:hover {
+    cursor: pointer;
+    
+}
+
+#backward_div:hover > #backward {
+    color: rgb(250, 0, 67);
 }
