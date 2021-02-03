@@ -10,7 +10,7 @@ body {
 .main_div {
     width: 200px;
     height: 200px;
-    /* display: flex; */
+    display: flex;
     margin: auto;
     position: absolute;
     top: 50%;
@@ -22,10 +22,19 @@ body {
 .child_div {
     width: 100px;
     height: 100px;
-    display: flex;
-    position: relative;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: coral;
+}
+
+.second_child {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(26, 121, 204);
 }
