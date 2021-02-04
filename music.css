@@ -304,19 +304,21 @@ body {
 .main_div {
     width: 90%;
     height: 90%;
+    border-radius: 40px;
 }
 
 /* This is the css styling for the music_player_div */
 .music_player_div {
     display: block;
     position: relative;
+    border-radius: 40px;
 }
 
 
 /* This is the css styling for the left section */
 .left_section {
     width: 100%;
-    height: 60%;
+    height: 70%;
     display: block;
     position: relative;
 }
@@ -325,7 +327,6 @@ body {
 
 .music_title {
     font-size: 24px;
-    top: 60%;
 }
 
 .music_artists {
@@ -334,8 +335,8 @@ body {
 
 /* This is css styling for the img  */
 .cover_image_div img {
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
 }
 
 /* This is the css for the cover image rotation */
@@ -359,23 +360,23 @@ body {
 /* This is the css styling for the right section */
 .right_section {
     width: 100%;
-    height: 40%;
+    height: 30%;
     position: relative;
 }
 
 /* This is the css for music_time_info_div */
 .music_time_info_div {
-    top: 45%;
+    top: 0;
 }
 
 /* This is the css for progress_div */
 .progress_div {
-    top: 45%;
+    top: 0;
 }
 
 /* This is the css for the playback_control_div */
 .playback_control_div {
-    top: 35%;
+    top: 0;
 }
 }
 
@@ -398,5 +399,60 @@ body {
         width: 220px;
         height: 220px;
     }
+    
+}
+
+/*_______________ For Screen Less than 300px__________ */
+@media only screen and (max-height: 480px) {
+
+
+    /* This is the css styling for the music_player_div */
+    .music_player_div {
+        display: flex;
+        position: absolute;
+        border-radius: 40px;
+    }
+
+    /* This is the css for right section */
+    .right_section {
+        height: 100%;
+        position: absolute;
+    }
+
+    /* This is the css for music title */
+    .music_title {
+        top: 30%;
+    }
+    
+    /* This is css styling for the img  */
+    .cover_image_div img {
+        width: 150px;
+        height: 150px;
+    }
+
+    /* This is the css for music_time_info_div */
+.music_time_info_div {
+    width: 85%;
+    top: 60%;
+}
+
+/* This is the css for progress_div */
+.progress_div {
+    width: 75%;
+    top: 60%;
+}
+
+/* This is the css for the playback_control_div */
+.playback_control_div {
+    top: 60%;
+}
+
+/* #forward, #backward {
+    color: aliceblue;
+}
+
+#mucic_current_time, #music_total_duration {
+    color: aliceblue;
+} */
     
 }
