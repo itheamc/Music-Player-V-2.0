@@ -13,7 +13,7 @@
 
 <body>
     <div class="main_div" id="main_div">
-        <div class="music_player_div">
+        <div class="music_player_div" id="music_player_div">
 
             <!-- This is the section which will be the left of the music player -->
             <section class="left_section">
@@ -29,7 +29,7 @@
 
                 <!-- This section will consists all the div related to the cover image -->
                 <div class="cover_image_div" id="cover_image_div">
-                    <img src="image/awaara.jpg" alt="" class="cover_image rotating_anim" id="cover_image">
+                    <img src="image/awaara.jpg" alt="" class="cover_image" id="cover_image">
                 </div>
             </section>
 
@@ -53,6 +53,7 @@
                     <!-- This section will consists the music playback control like play, pause, 
                 forward, backward etc -->
                     <div class="playback_control_div" id="playback_control_div">
+                        <audio src="" id="music"></audio>
                         <div id="backward_div"><i class="fas fa-step-backward" id="backward"></i></div>
                         <div id="play_div"><i class="fas fa-play" id="play"></i></div>
                         <div id="forward_div"><i class="fas fa-step-forward" id="forward"></i></div>
@@ -62,6 +63,8 @@
 
         </div>
     </div>
+
+    <script src="script.js"></script>
 
 </body>
 

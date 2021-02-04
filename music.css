@@ -17,8 +17,12 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /* box-shadow: 10px 10px 50px 20px grey; */
     border-radius: 16px;
+}
+
+/* This is the css for box shadow */
+.box_shadow {
+    box-shadow:10px 10px 80px 10px #584949;
 }
 
 /* This is the css styling for the music_player_div */
@@ -28,6 +32,9 @@ body {
     display: flex;
     position: relative;
     border-radius: 16px;
+}
+
+.flash_animation {
     animation-name: colorAnimation;
     animation-duration: 500ms;
     animation-timing-function:cubic-bezier(1, 0, 0, 1);
@@ -181,7 +188,7 @@ body {
     position: relative;
     display: flex;
     top: 5px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(9, 3, 94);
     border-radius: 20px;
 }
 
