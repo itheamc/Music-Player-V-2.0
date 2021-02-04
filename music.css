@@ -10,9 +10,9 @@ body {
 
 /* This is the css styling for the main div */
 .main_div {
-    width: 600px;
-    height: 400px;
-    display: flex;
+    width: 75%;
+    height: 90%;
+    display: block;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -26,6 +26,7 @@ body {
     width: 100%;
     height: 100%;
     display: flex;
+    position: relative;
     border-radius: 16px;
     animation-name: colorAnimation;
     animation-duration: 500ms;
@@ -60,21 +61,22 @@ body {
 /* This is the css styling for the left section */
 .left_section {
     width: 50%;
-    display: flex;
+    display: block;
+    position: relative;
 }
 
 /* This is css styling for the music_info_div */
 .music_info_div {
-    width: 300px;
-    height: 100px;
+    width: 100%;
+    height: 20%;
     display: block;
-    position: absolute;
+    position: relative;
 }
 
 /* This is the css styling for the music_title_div */
 .music_title_div {
     width: 100%;
-    height: 50px;
+    height: 50%;
     position: relative;
 }
 
@@ -82,39 +84,41 @@ body {
     position: absolute;
     top: 70%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 32px;
+    transform: translate(-50%, 0%);
 }
 
 /* This is the css styling for the music_artists_div */
 .music_artists_div {
     width: 100%;
-    height: 50px;
+    height: 50%;
     position: relative;
 }
 
 .music_artists {
     position: absolute;
-    top: 20%;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%, -20%);
+    font-family: cursive;
+    transform: translate(-50%, 0%);
 }
 
 /* This is css styling for the music cover div */
 .cover_image_div {
     width: 100%;
-    height: 300px;
+    height: 80%;
     position: relative;
-    top: 100px;
 }
 
 /* This is css styling for the img  */
 .cover_image_div img {
-    width: 250px;
-    height: 250px;
+    width: 400px;
+    height: 400px;
     position: relative;
     display: flex;
+    top: 7%;
     margin: auto;
-    top: 20px;
     border-image: round;
     border-radius: 250px;
 }
@@ -155,7 +159,7 @@ body {
     position: relative;
     display: flex;
     margin: auto;
-    top: 200px;
+    top: 70%;
     justify-content: space-between;
 }
 
@@ -166,7 +170,7 @@ body {
     position: relative;
     display: flex;
     margin: auto;
-    top: 200px;
+    top: 70%;
 }
 
 
@@ -215,7 +219,7 @@ body {
     position: relative;
     display: flex;
     justify-content: space-around;
-    top: 200px;
+    top: 70%;
 }
 
 /* This id the css for the play div */
