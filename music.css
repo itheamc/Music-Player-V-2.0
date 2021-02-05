@@ -198,7 +198,7 @@ body {
 
 /* This is the css for progress */ 
 #progress {
-    width: 50%;
+    width: 0;
     height: 100%;
     background-color: rgb(250, 204, 0);
     border-radius: 20px;
