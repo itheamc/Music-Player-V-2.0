@@ -151,7 +151,7 @@ body {
     height: 350px;
     position: absolute;
     border-radius: 250px;
-    background-color: blue;
+    background-color: white;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -459,7 +459,7 @@ body {
     
 }
 
-/*_______________ For Screen Less than 300px__________ */
+/*_______________ For Screen height Less than 480px__________ */
 @media only screen and (max-height: 480px) {
 
 
@@ -521,5 +521,47 @@ body {
 #mucic_current_time, #music_total_duration {
     color: aliceblue;
 } */
+    
+}
+
+/*_______________ For Screen Less than 180px width and 370px height__________ */
+@media only screen and (max-height: 370px), (max-width: 220px) {
+
+    /* This is css styling for the img  */
+    .cover_image_div img, .cover_image_div .flash_anim_div {
+        width: 100px;
+        height: 100px;
+    }
+
+    /* This is the css for music title */
+    #music_title {
+        font-size: 14px;
+    }
+    
+    /* This is the css for music artists */
+    .music_artists {
+        font-size: 10px;
+    }
+    
+}
+
+/*_______________ For Screen Less than 180px width and 370px height__________ */
+@media only screen and (max-height: 300px), (max-width: 168px) {
+
+    /* This is css styling for the img  */
+    .cover_image_div img, .cover_image_div .flash_anim_div {
+        width: 50px;
+        height: 50px;
+    }
+
+    /* This is the css for music title */
+    #music_title {
+        font-size: 10px;
+    }
+    
+    /* This is the css for music artists */
+    .music_artists {
+        font-size: 6px;
+    }
     
 }
