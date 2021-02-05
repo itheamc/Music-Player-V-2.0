@@ -70,12 +70,16 @@ const setDuration = (t) => {
 
 // updating progress
 const updateProgress = (cur_t, dur) => {
+    const progress_width = progress_bar.clientWidth;
+    let clicked_at = (progress_width * cur_t) / dur;
+    let translation_x_per = ((clicked_at - 8.5) / 15) * 100;
     progress_line.style.width = `${(cur_t / dur) * 100}%`;
-    progress_circle.style.transform = `translateX(${(cur_t / dur) * 100 * 16.2}%)`;
+    progress_circle.style.transform = `translateX(${translation_x_per}%)`;
 }
 
 music.addEventListener('timeupdate', (event) => {
-    const {currentTime, duration} = event.srcElement;
+
+    const {currentTime, duration} = event.target;
     if(duration) {
         setDuration(duration)
     }
@@ -88,28 +92,8 @@ music.addEventListener('timeupdate', (event) => {
 
 
 progress_bar.addEventListener('click', (event) => {
-    const maxOffsetX = progress_bar.offsetWidth;
-    const tempX = event.offsetX;
-    console.log(tempX);
-    let widthPercent = (tempX / maxOffsetX) * 100;
-    let tempPercent = ((tempX - 8.5) / 15) * 100;
-    console.log(tempPercent);
-    progress_line.style.width = `${widthPercent}%`;
-    progress_circle.style.transform = `translateX(${tempPercent}%)`;
-    music.currentTime = (tempX / maxOffsetX) * musicDur;
+    const maxOffsetX = progress_bar.clientWidth;
+    // console.log(progress_bar.offsetWidth);
+    const clickedAt = event.offsetX;
+    music.currentTime = (clickedAt / maxOffsetX) * musicDur;
 });
-
-// const minClientX = 285;
-// const maxClientX = 520;
-// progress_circle.addEventListener('drag', (event) => {
-//     if(event.clientX > 0 && event.clientX <= 520) {
-//     let perc = ((event.clientX - minClientX) / (maxClientX - minClientX)) * 100;
-//     perc = perc > -1 ? perc : 0.01;
-//     let translation_x_per = perc * 16.2;
-//     progress_line.style.width = `${perc}%`;
-//     progress_circle.style.transform = `translateX(${translation_x_per}%)`;
-//     music.currentTime = (perc/100) * musicDur;
-//     // console.log(perc);
-//     }
-    
-// });
