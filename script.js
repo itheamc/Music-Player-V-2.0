@@ -5,6 +5,7 @@ const progress_bar = document.getElementById("progress_bar");
 const progress_line = document.getElementById("progress");
 const progress_circle = document.getElementById("progress_circle");
 
+const image_div = document.getElementById("flash_anim_div");
 const image = document.getElementById("cover_image");
 const current_time = document.getElementById("mucic_current_time");
 const total_duration = document.getElementById("music_total_duration");
@@ -19,6 +20,7 @@ total_duration.innerHTML = "0:00";
 const loadMusic = function() {
     music.setAttribute("src", "music/libaas.mp3");
     image.setAttribute("src", "image/awaara.jpg");
+
 }
 
 loadMusic();
@@ -28,8 +30,9 @@ const playNow = function() {
     isPlaying = true;
     music.play();
     image.classList.add("rotating_anim");
-    music_player_div.classList.add("flash_animation");
+    image_div.classList.add("flash_animation");
     main_div.classList.remove("box_shadow");
+    music_player_div.classList.add("color_animation");
     play_pause_icon.classList.replace("fa-play", "fa-pause");
 
 }
@@ -38,8 +41,9 @@ const pauseNow = function() {
     isPlaying = false;
     music.pause();
     image.classList.remove("rotating_anim");
-    music_player_div.classList.remove("flash_animation");
+    image_div.classList.remove("flash_animation");
     main_div.classList.add("box_shadow");
+    music_player_div.classList.remove("color_animation");
     play_pause_icon.classList.replace("fa-pause", "fa-play");
 }
 

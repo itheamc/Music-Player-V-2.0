@@ -34,33 +34,34 @@ body {
     border-radius: 16px;
 }
 
-.flash_animation {
+/* This is flash animation for music player div */
+.color_animation {
     animation-name: colorAnimation;
     animation-duration: 500ms;
-    animation-timing-function:cubic-bezier(1, 0, 0, 1);
+    animation-timing-function:cubic-bezier(0.895, 0.03, 0.685, 0.22);
     animation-iteration-count: infinite;
 }
 
 @keyframes colorAnimation {
     0% {
         background-color: rgba(255, 0, 0, 0.30);
-        box-shadow: 10px 10px 50px 20px rgba(255, 102, 0, 0.75);
+        box-shadow: 10px 10px 50px 15px rgba(255, 102, 0, 0.75);
     }
     25% {
         background-color: rgba(255, 102, 0, 0.30);
-        box-shadow: 10px 10px 50px 20px rgba(255, 0, 0, 0.75);
+        box-shadow: 10px 10px 50px 15px rgba(255, 0, 0, 0.75);
     }
     50% {
         background-color: rgba(255, 255, 0, 0.30);
-        box-shadow: 10px 10px 50px 20px rgba(255, 0, 0, 0.75);
+        box-shadow: 10px 10px 50px 15px rgba(255, 0, 0, 0.75);
     }
     75% {
         background-color: rgba(209, 201, 87, 0.30);
-        box-shadow: 10px 10px 50px 20px rgba(255, 0, 119, 0.658);
+        box-shadow: 10px 10px 50px 15px rgba(255, 0, 119, 0.658);
     }
     100% {
        background-color: rgba(255, 0, 0, 0.30);
-       box-shadow: 10px 10px 50px 20px rgba(209, 201, 87, 0.75);
+       box-shadow: 10px 10px 50px 15px rgba(209, 201, 87, 0.75);
 
     }
 }
@@ -115,7 +116,8 @@ body {
 .cover_image_div {
     width: 100%;
     height: 80%;
-    position: relative;
+    position: absolute;
+    display: flex;
 }
 
 /* This is css styling for the img  */
@@ -123,18 +125,15 @@ body {
     width: 350px;
     height: 350px;
     position: relative;
-    display: flex;
-    top: 15%;
     margin: auto;
-    border-image: round;
     border-radius: 250px;
 }
 
 /* This is the css for the cover image rotation */
 .rotating_anim {
     animation-name: image_rotation;
-    animation-duration: 4s;
-    animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
 }
 
@@ -144,6 +143,46 @@ body {
     }
     to {
         transform: rotate(360deg);
+    }
+}
+
+.cover_image_div .flash_anim_div {
+    width: 350px;
+    height: 350px;
+    position: absolute;
+    border-radius: 250px;
+    background-color: blue;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.flash_animation {
+    animation-name: imageAnimation;
+    animation-duration: 400ms;
+    animation-timing-function:ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes imageAnimation {
+    0% {
+        box-shadow: 10px 10px 50px 10px rgba(255, 238, 0, 0.75);
+    }
+    20% {
+        box-shadow: 10px 10px 50px 20px rgba(255, 94, 0, 0.75);
+    }
+    40% {
+        box-shadow: 10px 10px 50px 30px rgba(200, 255, 0, 0.75);
+    }
+    60% {
+        box-shadow: 10px 10px 50px 40px rgba(214, 17, 17, 0.75);
+    }
+    80% {
+        box-shadow: 10px 10px 50px 50px rgba(211, 144, 19, 0.75);
+    }
+    100% {
+       box-shadow: 10px 10px 50px 60px rgba(204, 8, 106, 0.75);
+
     }
 }
 
@@ -311,14 +350,15 @@ body {
 .main_div {
     width: 90%;
     height: 90%;
-    border-radius: 40px;
+    border-radius: 8px;
+
 }
 
 /* This is the css styling for the music_player_div */
 .music_player_div {
     display: block;
     position: relative;
-    border-radius: 40px;
+    border-radius: 8px;
 }
 
 
@@ -341,10 +381,11 @@ body {
 }
 
 /* This is css styling for the img  */
-.cover_image_div img {
+.cover_image_div img, .cover_image_div .flash_anim_div {
     width: 250px;
     height: 250px;
 }
+
 
 /* This is the css for the cover image rotation */
 .rotating_anim {
@@ -389,9 +430,18 @@ body {
 
 /*_______________ For Screen Less than 300px__________ */
 @media only screen and (max-width: 320px) {
-        
-    /* This is the css styling for the music_title_div */
     
+    /* Remove animation from the .music_player_div */
+    .color_animation {
+        animation: none;
+    }
+
+    /* This is the css for box shadow */
+    .box_shadow {
+        box-shadow: none;
+    }
+
+    /* This is the css styling for the music_title_div */
     .music_title {
         font-size: 18px;
         top: 60%;
@@ -402,7 +452,7 @@ body {
     }
     
     /* This is css styling for the img  */
-    .cover_image_div img {
+    .cover_image_div img, .cover_image_div .flash_anim_div {
         width: 220px;
         height: 220px;
     }
@@ -413,11 +463,21 @@ body {
 @media only screen and (max-height: 480px) {
 
 
+    /* Remove animation from the .music_player_div */
+    .color_animation {
+        animation: none;
+    }
+
+    /* This is the css for box shadow */
+    .box_shadow {
+        box-shadow: none;
+    }
+
     /* This is the css styling for the music_player_div */
     .music_player_div {
         display: flex;
         position: absolute;
-        border-radius: 40px;
+        /* border-radius: 8px; */
     }
 
     /* This is the css for right section */
@@ -432,7 +492,7 @@ body {
     }
     
     /* This is css styling for the img  */
-    .cover_image_div img {
+    .cover_image_div img, .cover_image_div .flash_anim_div {
         width: 150px;
         height: 150px;
     }
